@@ -1,0 +1,21 @@
+<h1>Door Buzz</h1>
+
+<% if (matching.length > 0) { %>
+  <h3>Matching Rules</h3>
+  <ul>
+  <% for(var i = 0; i < matching.length; i++) { %>
+    <li>
+      <%= matching[i].summary %> : <%= matching[i].start %> - <%= matching[i].end %>
+
+    </li>
+  <% } %>
+</ul>
+<% } else { %>
+  <p>Door access is closed</p>
+<% } %>
+
+<p>Last updated: <%= last_updated %></p>
+
+<form action="/refresh" method="post">
+  <button>Refresh</button>
+</form>

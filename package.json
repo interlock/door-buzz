@@ -2,10 +2,21 @@
   "name": "door-buzz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
+    "moment": "^2.14.1",
+    "moment-timezone": "^0.5.5",
+    "morgan": "^1.7.0",
+    "twilio": "^2.9.2"
+  }
 }
