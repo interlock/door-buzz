@@ -1,0 +1,65 @@
+<h3>Settings</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Stat</th>
+      <th>#</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Status</td>
+      <td><%= status %></td>
+    </tr>
+    <tr>
+      <td>Forward Number</td>
+      <td><%= process.env.AFTER_HOURS_NUMBER %></td>
+    </tr>
+    <tr>
+      <td>gCal ID</td>
+      <td><%= process.env.GCAL_ID %></td>
+    </tr>
+    <tr>
+      <td>Override Answer</td>
+      <td><%= process.env.OVERRIDE %></td>
+      <td>
+        <form method="post">
+          <input type="submit" name="override" value="Toggle" class="btn btn-default"/>
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Stats</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Stat</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Calls Recieved</td>
+      <td><%= stats.get('calls_count') %></td>
+    </tr>
+    <tr>
+      <td>Doors Opened</td>
+      <td><%= stats.get('door_buzz_count') %></td>
+    </tr>
+    <tr>
+      <td>Calls Forwarded</td>
+      <td><%= stats.get('call_forward_count') %></td>
+    </tr>
+    <tr>
+      <td>iCal File Loads</td>
+      <td><%= stats.get('gcal_update_count') %></td>
+    </tr>
+  </tbody>
+</table>
+
+<form action="/refresh" method="post">
+  <button class="btn btn-default">Refresh</button>
+</form>
