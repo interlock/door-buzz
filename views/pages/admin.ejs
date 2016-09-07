@@ -60,3 +60,25 @@
 <form action="/refresh" method="post">
   <button class="btn btn-default">Refresh</button>
 </form>
+
+<h3>Events I know about today</h3>
+<table class="table table-stripe">
+  <tr>
+    <th>Summary</th>
+    <th>Start</th>
+    <th>End</th>
+  </tr>
+  <% for(var i in today_events) { %>
+  <tr>
+    <td>
+      <%= today_events[i].summary %>
+    </td>
+    <td>
+      <%= today_events[i].start.format() %>
+    </td>
+    <td>
+      <%= today_events[i].end.format() %>
+    </td>
+  </tr>
+  <% } %>
+</table>
