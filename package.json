@@ -4,9 +4,11 @@
   "description": "",
   "main": "lib/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/server.js"
   },
-  "author": "",
+  "public": false,
+  "author": "James Sapara <james.sapara@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -14,9 +16,11 @@
     "ejs": "^2.5.1",
     "express": "^4.14.0",
     "express-ejs-layouts": "^2.2.0",
+    "ical": "^0.5.0",
     "moment": "^2.14.1",
     "moment-timezone": "^0.5.5",
     "morgan": "^1.7.0",
+    "rrule": "^2.1.0",
     "twilio": "^2.9.2"
   },
   "devDependencies": {

@@ -1,24 +1,21 @@
 <h3>Settings</h3>
 <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Stat</th>
-      <th>#</th>
-      <th>&nbsp;</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>Status</td>
-      <td><%= status %></td>
+      <td><%= status ? 'Letting people in' : 'Not letting people in' %></td>
     </tr>
     <tr>
       <td>Forward Number</td>
-      <td><%= process.env.AFTER_HOURS_NUMBER %></td>
+      <td><%= process.env.AFTER_HOURS_NUMBER || 'No number set, playing message and hanging up.' %></td>
     </tr>
     <tr>
       <td>gCal ID</td>
-      <td><%= process.env.GCAL_ID %></td>
+      <td><%= process.env.GCAL_ID || 'Defaulting to using override mode only' %></td>
+    </tr>
+    <tr>
+      <td>Timezone I think I am using</td>
+      <td><%= tz %></td>
     </tr>
     <tr>
       <td>Override Answer</td>
