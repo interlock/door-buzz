@@ -1,3 +1,29 @@
 # Door Buzz
 
 Direct a door buzzer to this project, and press the 9 button to let people in when a google calendar ical file has anything scheduled.
+
+## Setup
+
+- Setup a google developer app and create some service account credentials
+- Convert the json file above to environment variables:
+  - G_PROJECT_ID
+  - G_PRIVATE_KEY_ID
+  - G_PRIVATE_KEY
+  - G_CLIENT_EMAIL
+  - G_CLIENT_ID
+  - G_CLIENT_X509_CERT_URL
+  - _optional_
+  - G_TYPE (defaults to: service_account)
+  - G_AUTH_URI (defaults to: https://accounts.google.com/o/oauth2/auth)
+  - G_TOKEN_URI (defaults to: https://accounts.google.com/o/oauth2/token)
+  - G_AUTH_PROVIDER_X509_CERT_URL (defaults to: https://www.googleapis.com/oauth2/v1/certs)
+  - `node utils/token.js ../my_token_jwt.json` will output env variables you can use
+- Configure the GCAL_ID to your public calendar
+- Configure the AFTER_HOURS_NUMBER to point to the number you want calls to go to when closed
+- Configure the SECRET if you want to use the /admin?secret=<SECRET> url
+
+## Operation
+
+Create events in the calendar for periods of time you want door-buzz to open the door.
+
+Manually override door-buzz on the admin panel.

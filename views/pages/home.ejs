@@ -5,7 +5,7 @@
   <ul>
   <% for(var i = 0; i < matching.length; i++) { %>
     <li>
-      <%= matching[i].summary %> : <%= matching[i].start %> - <%= matching[i].end %>
+      <%= matching[i].summary %> : <%= matching[i].start.dateTime %> - <%= matching[i].end.dateTime %> [<%= matching[i].start.timeZone %>]
     </li>
   <% } %>
 </ul>
