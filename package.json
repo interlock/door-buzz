@@ -19,6 +19,7 @@
     "googleapis": "^12.4.0",
     "moment": "^2.14.1",
     "moment-timezone": "^0.5.5",
+    "mongodb": "^2.2.10",
     "morgan": "^1.7.0",
     "twilio": "^2.9.2"
   },

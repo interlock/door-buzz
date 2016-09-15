@@ -40,19 +40,23 @@
   <tbody>
     <tr>
       <td>Calls Recieved</td>
-      <td><%= stats.get('calls_count') %></td>
+      <td><%= stats.calls %></td>
     </tr>
     <tr>
       <td>Doors Opened</td>
-      <td><%= stats.get('door_buzz_count') %></td>
+      <td><%= stats.door_buzz %></td>
     </tr>
     <tr>
       <td>Calls Forwarded</td>
-      <td><%= stats.get('call_forward_count') %></td>
+      <td><%= stats.call_forward %></td>
+    </tr>
+    <tr>
+      <td>Calls Rejected</td>
+      <td><%= stats.call_rejected %></td>
     </tr>
     <tr>
       <td>iCal File Loads</td>
-      <td><%= stats.get('gcal_update_count') %></td>
+      <td><%= stats.gcal_updated %></td>
     </tr>
   </tbody>
 </table>
