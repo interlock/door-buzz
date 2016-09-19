@@ -2,6 +2,15 @@
 
 Direct a door buzzer to this project, and press the 9 button to let people in when a google calendar ical file has anything scheduled.
 
+## Requirements
+
+- Twilio account with a number for your buzzer to call
+- Heroku account for deployment (ideally you pay for a small dyno, the spin up time on hobby leads to dropped calls)
+- A free heroku mongodb database to record metrics
+- A public Google Calendar you want to define events in
+- Google API Service account keys with scoped access to read calendar data
+- Optionally a number to forward call to after hours (default is to say we are closed)
+
 ## Setup
 
 - Setup a google developer app and create some service account credentials
