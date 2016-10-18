@@ -30,9 +30,13 @@ Direct a door buzzer to this project, and press the 9 button to let people in wh
 - Configure the GCAL_ID to your public calendar
 - Configure the AFTER_HOURS_NUMBER to point to the number you want calls to go to when closed
 - Configure the SECRET if you want to use the /admin?secret=<SECRET> url
+- Point your Twilio numbers call handling to: https://<your-app-name>.herokuapp.com/twilio/call (POST or GET, does not matter)
+
 
 ## Operation
 
 Create events in the calendar for periods of time you want door-buzz to open the door.
 
 Manually override door-buzz on the admin panel.
+
+Admin Panel Url: https://<app>.herokuapp.com/admin?secret=SECRET
