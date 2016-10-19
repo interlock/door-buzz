@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node lib/server.js",
-    "postinstall": "./node_modules/.bin/bower install --allow-root && ./node_modules/.bin/grunt bower_concat"
+    "postinstall": "node node_modules/.bin/bower install --allow-root && node node_modules/.bin/grunt bower_concat"
   },
   "public": false,
   "author": "James Sapara <james.sapara@gmail.com>",
