@@ -5,7 +5,8 @@
   "main": "lib/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node lib/server.js"
+    "start": "node lib/server.js",
+    "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/grunt bower_concat"
   },
   "public": false,
   "author": "James Sapara <james.sapara@gmail.com>",
@@ -24,7 +25,9 @@
     "twilio": "^2.9.2"
   },
   "devDependencies": {
+    "bower": "^1.7.9",
     "grunt": "^1.0.1",
+    "grunt-bower-concat": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-express-server": "^0.5.3"

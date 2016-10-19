@@ -1,0 +1,23 @@
+{
+  "name": "door-buzz",
+  "description": "",
+  "main": "lib/server.js",
+  "authors": [
+    "James Sapara <james.sapara@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/interlock/door-buzz",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^3.5.17",
+    "c3": "^0.4.11",
+    "jquery": "^3.1.1"
+  }
+}

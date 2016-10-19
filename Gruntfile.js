@@ -25,12 +25,21 @@ module.exports = function(grunt) {
       options: {
         spawn: false // for grunt-contrib-watch v0.5.0+, "nospawn: true" for lower versions. Without this option specified express won't be reloaded
       }
+    },
+    bower_concat: {
+      all: {
+        dest: {
+          'js': 'public/_bower.js',
+          'css': 'public/_bower.css'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-express-server');
+  grunt.loadNpmTasks('grunt-bower-concat');
 
   grunt.registerTask('default', ['express:dev', 'watch']);
 

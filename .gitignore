@@ -3,3 +3,9 @@
 
 # Static artifacts
 /node_modules
+
+# Build artifcats
+public/_bower*
+
+# Bower
+bower_components/*
