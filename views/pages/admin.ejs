@@ -86,3 +86,51 @@
   </tr>
   <% } %>
 </table>
+
+<div id="chart"></div>
+<script>
+$(function() {
+  $.ajax({
+    method: 'GET',
+    url: '/api/data'
+  }).then(function(data) {
+    console.log(data);
+    var dates = Object.keys(data.grouped).filter( function(e) { return e != '_'; }).sort();
+    var graphData = [
+      ['x'].concat(dates)
+    ];
+    data.grouped._.forEach(function(key) {
+      var keyData = [key];
+      dates.forEach(function(date) {
+        if (data.grouped[date] !== undefined && data.grouped[date][key] !== undefined) {
+          keyData.push(data.grouped[date][key]);
+        } else {
+          keyData.push(0);
+        }
+      });
+      graphData.push(keyData);
+    });
+    updateGraph(graphData);
+  });
+
+  function updateGraph(data) {
+    var chart = c3.generate({
+      bindto: '#chart',
+      data: {
+        x: 'x',
+        columns: data
+      },
+      axis: {
+        x: {
+          type: 'timeseries',
+          tick: {
+            format: '%Y-%m-%d'
+          }
+        }
+      }
+    });
+  }
+
+
+});
+</script>
