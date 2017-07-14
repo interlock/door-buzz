@@ -8,6 +8,9 @@
     "start": "node lib/server.js",
     "postinstall": "node node_modules/.bin/bower install --allow-root && node node_modules/.bin/grunt bower_concat"
   },
+  "engines": {
+    "node": ">= 6.11.1"
+  },
   "public": false,
   "author": "James Sapara <james.sapara@gmail.com>",
   "license": "MIT",
