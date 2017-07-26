@@ -20,12 +20,12 @@
     "ejs": "^2.5.1",
     "express": "^4.14.0",
     "express-ejs-layouts": "^2.2.0",
-    "googleapis": "^12.4.0",
+    "googleapis": "^16.0.0",
     "moment": "^2.14.1",
     "moment-timezone": "^0.5.5",
     "mongodb": "^2.2.10",
     "morgan": "^1.7.0",
-    "twilio": "^2.9.2"
+    "twilio": "^3.5.0"
   },
   "devDependencies": {
     "bower": "^1.7.9",
