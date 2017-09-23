@@ -29,6 +29,7 @@ Direct a door buzzer to this project, and press the 9 button to let people in wh
   - `node utils/token.js ../my_token_jwt.json` will output env variables you can use
 - Configure the GCAL_ID to your public calendar
 - Configure the AFTER_HOURS_NUMBER to point to the number you want calls to go to when closed
+- Configure the AFTER_HOURS_CODE to set a four digit code to unlock after hours
 - Configure the SECRET if you want to use the /admin?secret=<SECRET> url
 - Point your Twilio numbers call handling to: https://<your-app-name>.herokuapp.com/twilio/call (POST or GET, does not matter)
 
