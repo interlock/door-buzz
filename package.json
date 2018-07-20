@@ -25,7 +25,7 @@
     "moment-timezone": "^0.5.5",
     "mongodb": "^2.2.10",
     "morgan": "^1.7.0",
-    "twilio": "3.16.0"
+    "twilio": "3.17.1"
   },
   "devDependencies": {
     "bower": "^1.7.9",
